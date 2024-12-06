@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+MY PROJECT NAME: ONLINE JOB PROTAL
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Documentation for SignUp and Login Components
+1. SignUp Component
+Overview
+The SignUp component allows users to register a new account by submitting their details through a form. It validates the input and sends a POST request to the backend server.
 
-## Available Scripts
+Key Features
+Collects user details: username, email, password, first name, last name, date of birth, and phone number.
+Validates the form to ensure all fields are filled before submission.
+Displays success or error messages based on the server response.
 
-In the project directory, you can run:
+Implementation
+State Management
+formData: Stores user input data.
+errorMessage: Displays validation or server-side errors.
+successMessage: Displays a success message after successful registration.
+Event Handlers
+handleChange: Updates the formData state when the user types in the input fields.
+handleSubmit:
+Validates that all fields are filled.
+Sends a POST request to the backend API endpoint /signup.
+Handles errors or success responses.
+Backend API Endpoint
+URL: https://backendapps-0d3a0920208f.herokuapp.com/signup
+Method: POST
+Request Body: JSON object containing the form data.
+Styling
+Inline styles are used for a responsive and visually appealing UI.
+Includes grid-based input fields layout and a styled header and footer.
+2. Login Component
+Overview
+The Login component allows users to sign into their accounts by providing email and password credentials.
 
-### `npm start`
+Key Features
+Validates user inputs.
+Sends login data to the server for authentication.
+Handles user roles (administrator, Customer, accountant, Manager) by redirecting to appropriate dashboards.
+Implementation
+State Management
+email & password: Stores the login credentials.
+errorMessage: Displays login validation or authentication errors.
+isLoading: Tracks the loading state during the login process.
+Event Handlers
+handleSubmit:
+Sends a POST request with login credentials to the /login endpoint.
+Handles errors or success responses.
+Stores user roles and allowed menus in localStorage.
+Redirects users based on their roles.
+Backend API Endpoint
+URL: https://backendapps-0d3a0920208f.herokuapp.com/login
+Method: POST
+Request Body: JSON object containing email and password.
+Role-Based Redirection
+Administrator: Redirects to /AdminDaschboard.
+Other Roles (Customer, accountant, Manager): Redirects to /UserDashboard.
+Styling
+Uses a clean and modern card-based layout.
+Provides hover effects and transitions for buttons and links.
+Common Features
+Responsive Design: Both components are styled for desktop and mobile compatibility.
+Error Handling: Displays errors gracefully to users in case of incomplete inputs or server issues.
+Navigation: Includes links for navigation to related pages (Home, Sign Up, Login, Forgot Password).
+Usage Instructions
+SignUp Component:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Include <SignUp /> in the desired route or page.
+Ensure the backend /signup API is configured and functional.
+Login Component:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Include <Login /> in the desired route or page.
+Ensure the backend /login API is configured and supports role-based authentication.
