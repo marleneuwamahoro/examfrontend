@@ -1,6 +1,5 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 
 const index = () => {
   return (
@@ -11,24 +10,24 @@ const index = () => {
         style={{ backgroundColor: "#282c34" }}
       >
         <div className="container d-flex justify-content-between align-items-center w-100">
-          <h1 className="mb-0">Welcome to Our Dry cleanner</h1>
+          <h1 className="mb-0">Welcome to Our Dry Cleaner</h1>
           <nav>
             <ul className="list-unstyled d-flex justify-content-center mb-0">
-            <li className="mx-3">
-              <a href="/" className="text-white bg-dark border-0 text-decoration-none">
-                Home
-              </a>
-            </li>
-            <li className="mx-3">
-              <a href="/login" className="text-white bg-dark border-0 text-decoration-none">
-                Login
-              </a>
-            </li>
-            <li className="mx-3">
-              <a href="/signup" className="text-white bg-dark border-0 text-decoration-none">
-                Sign Up
-              </a>
-            </li>            
+              <li className="mx-3">
+                <a href="/" className="text-white bg-dark border-0 text-decoration-none">
+                  Home
+                </a>
+              </li>
+              <li className="mx-3">
+                <a href="/login" className="text-white bg-dark border-0 text-decoration-none">
+                  Login
+                </a>
+              </li>
+              <li className="mx-3">
+                <a href="/signup" className="text-white bg-dark border-0 text-decoration-none">
+                  Sign Up
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -38,7 +37,7 @@ const index = () => {
       <section
         className="d-flex flex-column justify-content-center align-items-center text-center text-white"
         style={{
-          backgroundColor: 'green', // Example Dry Cleaning Image
+          backgroundColor: "green", // Example Dry Cleaning Image
           height: "60vh",
           padding: "0 20px",
         }}
@@ -84,18 +83,7 @@ const index = () => {
         className="bg-dark text-white py-4 text-center"
         style={{ backgroundColor: "#282c34" }}
       >
-        <div className="social-icons">
-          <button className="mx-3" style={{ color: "white", background: "none", border: "none" }}>
-            <FaFacebookF size={30} />
-          </button>
-          <button className="mx-3" style={{ color: "white", background: "none", border: "none" }}>
-            <FaTwitter size={30} />
-          </button>
-          <button className="mx-3" style={{ color: "white", background: "none", border: "none" }}>
-            <FaLinkedinIn size={30} />
-          </button>
-        </div>
-        <p>&copy; 2024 Dry cleanner Ltd | All rights reserved</p>
+        <p>&copy; 2024 Dry Cleaner Ltd | All rights reserved</p>
       </footer>
     </div>
   );
